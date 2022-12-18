@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.integrationtest.mapper.member.PaymentMapper">
+    <insert id="buyPoint" parameterType="com.example.integrationtest.dto.member.PaymentDTO">
+        INSERT INTO payment(
+                            email,
+                            amount,
+                            uid
+        ) values (
+                  #{email},
+                  #{amount},
+                  #{uid}
+                         )
+    </insert>
+    <select id="pointList"  parameterType="com.example.integrationtest.dto.member.PaymentDTO">
+        SELECT email, amount
+            FROM payment
+                WHERE email = #{email} and amount = #{amount}
+    </select>
+</mapper>
