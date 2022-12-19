@@ -12,8 +12,8 @@ public class SubscribeRepository {
     @Autowired
     SubscribeMapper mapper;
 
-    public int subscribe(@RequestParam("email") String email){
-        return mapper.subscribe(email);
+    public void subscribe(@RequestParam("email") String email){
+        mapper.subscribe(email);
     }
 
 }

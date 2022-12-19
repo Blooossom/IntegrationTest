@@ -14,7 +14,7 @@ public class ContactController {
     ContactService cs;
 
 
-    @PostMapping("/contact")
+    @PostMapping("/requestCall")
     public String requestCall(ContactDTO contactDTO){
         cs.requestCall(contactDTO);
         return "index";

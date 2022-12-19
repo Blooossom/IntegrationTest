@@ -12,7 +12,7 @@ public class SubscribeService {
     @Autowired
     SubscribeRepository sr;
 
-    public int subscribe(@RequestParam("email") String email){
-        return sr.subscribe(email);
+    public void subscribe(@RequestParam("email") String email){
+         sr.subscribe(email);
     }
 }

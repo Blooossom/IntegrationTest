@@ -12,8 +12,7 @@ public class ContactRepository {
     @Autowired
     ContactMapper mapper;
 
-    public int requestCall(ContactDTO contactDTO){
-        return mapper.requestCall(contactDTO);
+    public void requestCall(ContactDTO contactDTO){mapper.requestCall(contactDTO);
     }
 
 }

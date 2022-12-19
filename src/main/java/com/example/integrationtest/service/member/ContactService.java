@@ -13,8 +13,8 @@ public class ContactService {
     ContactRepository cr;
 
 
-    public int requestCall(ContactDTO contactDTO){
-        return cr.requestCall(contactDTO);
+    public void requestCall(ContactDTO contactDTO){
+        cr.requestCall(contactDTO);
     }
 
 

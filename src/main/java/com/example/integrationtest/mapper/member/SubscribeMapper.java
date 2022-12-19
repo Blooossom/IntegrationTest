@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Mapper
 public interface SubscribeMapper {
 
-    public int subscribe(@RequestParam("email") String email);
+    public void subscribe(@RequestParam("email") String email);
 
 }

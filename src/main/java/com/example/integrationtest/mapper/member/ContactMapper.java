@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface ContactMapper {
 
-    public int requestCall(ContactDTO contactDTO);
+    public void requestCall(ContactDTO contactDTO);
 
 
 }
