@@ -13,8 +13,8 @@ public class AdminLoginRepository {
     AdminLoginMapper mapper;
 
 
-    public AdminLoginDTO login(AdminLoginDTO adminLoginDTO){
-        return mapper.login(adminLoginDTO);
+    public AdminLoginDTO adminLogin(AdminLoginDTO adminLoginDTO){
+        return mapper.adminLogin(adminLoginDTO);
     }
 
 

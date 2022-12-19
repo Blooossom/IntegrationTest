@@ -1,6 +1,7 @@
 package com.example.integrationtest.controller.admin;
 
 
+import com.example.integrationtest.aop.SkipChecking;
 import com.example.integrationtest.dto.member.SubscribeDTO;
 import com.example.integrationtest.service.admin.AdminSubscribeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ public class AdminSubscribeController {
 
     @Autowired
     AdminSubscribeService asv;
-
+    @SkipChecking
     @GetMapping("/subscribeList")
     public ArrayList<SubscribeDTO> subscribeList(){
         return asv.subscribeList();

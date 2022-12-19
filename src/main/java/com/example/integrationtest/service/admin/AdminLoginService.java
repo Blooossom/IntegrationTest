@@ -12,8 +12,8 @@ public class AdminLoginService {
     @Autowired
     AdminLoginRepository ar;
 
-    public AdminLoginDTO login(AdminLoginDTO adminLoginDTO){
-        return ar.login(adminLoginDTO);
+    public AdminLoginDTO adminLogin(AdminLoginDTO adminLoginDTO){
+        return ar.adminLogin(adminLoginDTO);
     }
 
 

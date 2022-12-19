@@ -1,6 +1,7 @@
 package com.example.integrationtest.controller.member;
 
 
+import com.example.integrationtest.aop.SkipChecking;
 import com.example.integrationtest.dto.member.MemberDTO;
 import com.example.integrationtest.service.member.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ public class MemberController {
 
     @Autowired
     MemberService ms;
-
+    @SkipChecking
     @PostMapping("/login")
     public String login(MemberDTO memberDTO, HttpSession session){
         if (session.getAttribute("email") != null) {
@@ -25,6 +26,7 @@ public class MemberController {
             return "index";
         }
     }
+    @SkipChecking
     @PostMapping("/signup")
     public String signUp(MemberDTO memberDTO){
         ms.signUp(memberDTO);
